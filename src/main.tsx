@@ -1,8 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./output.css";
-import App from "./App.tsx";
 import { BrowserRouter } from "react-router";
+import App from "./components/App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
