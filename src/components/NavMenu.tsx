@@ -1,55 +1,52 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { Icons } from "@/components/ui/icons";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { Link, NavLink } from "react-router";
+import { NavLink } from "react-router";
 
-const components: { title: string; href: string; description: string }[] = [
-  {
-    title: "Alert Dialog",
-    href: "/docs/primitives/alert-dialog",
-    description:
-      "A modal dialog that interrupts the user with important content and expects a response.",
-  },
-  {
-    title: "Hover Card",
-    href: "/docs/primitives/hover-card",
-    description:
-      "For sighted users to preview content available behind a link.",
-  },
-  {
-    title: "Progress",
-    href: "/docs/primitives/progress",
-    description:
-      "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
-  },
-  {
-    title: "Scroll-area",
-    href: "/docs/primitives/scroll-area",
-    description: "Visually or semantically separates content.",
-  },
-  {
-    title: "Tabs",
-    href: "/docs/primitives/tabs",
-    description:
-      "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
-  },
-  {
-    title: "Tooltip",
-    href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
-  },
-];
+// const components: { title: string; href: string; description: string }[] = [
+//   {
+//     title: "Alert Dialog",
+//     href: "/docs/primitives/alert-dialog",
+//     description:
+//       "A modal dialog that interrupts the user with important content and expects a response.",
+//   },
+//   {
+//     title: "Hover Card",
+//     href: "/docs/primitives/hover-card",
+//     description:
+//       "For sighted users to preview content available behind a link.",
+//   },
+//   {
+//     title: "Progress",
+//     href: "/docs/primitives/progress",
+//     description:
+//       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+//   },
+//   {
+//     title: "Scroll-area",
+//     href: "/docs/primitives/scroll-area",
+//     description: "Visually or semantically separates content.",
+//   },
+//   {
+//     title: "Tabs",
+//     href: "/docs/primitives/tabs",
+//     description:
+//       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
+//   },
+//   {
+//     title: "Tooltip",
+//     href: "/docs/primitives/tooltip",
+//     description:
+//       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+//   },
+// ];
 
 const NavMenu = () => (
   <NavigationMenu>
@@ -103,19 +100,50 @@ const NavMenu = () => (
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem> */}
+
+      {/* 
+
+<header className="bg-gray-800 text-white">
+          <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+            <Link href="/" className="text-xl font-bold">
+              Logo
+            </Link>
+            <ul className="flex space-x-4">
+              <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
+              <li><Link href="/about" className="hover:text-gray-300">About</Link></li>
+              <li><Link href="/portfolio" className="hover:text-gray-300">Portfolio</Link></li>
+              <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
+            </ul>
+          </nav>
+        </header>
+*/}
+
       <NavigationMenuItem>
         <NavLink to="/">
-          <NavigationMenuLink>Hello</NavigationMenuLink>
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Home
+          </NavigationMenuLink>
         </NavLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavLink to="/experience">
-          <NavigationMenuLink>Experience</NavigationMenuLink>
+        <NavLink to="/about">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            About
+          </NavigationMenuLink>
         </NavLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavLink to="/projects">
-          <NavigationMenuLink>Projects</NavigationMenuLink>
+        <NavLink to="/portfolio">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Portfolio
+          </NavigationMenuLink>
+        </NavLink>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavLink to="/contact">
+          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+            Contact
+          </NavigationMenuLink>
         </NavLink>
       </NavigationMenuItem>
     </NavigationMenuList>

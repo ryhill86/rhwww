@@ -1,18 +1,20 @@
 import { Routes, Route } from "react-router";
 import NavMenu from "./NavMenu";
-import Hello from "./pages/Hello";
-import Projects from "./pages/Projects";
-import Experience from "./pages/Experience";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
     <>
       <NavMenu />
-      <div>
+      <div className="container mx-auto flex-grow px-4 py-8">
         <Routes>
-          <Route path="/" element={<Hello />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </>
