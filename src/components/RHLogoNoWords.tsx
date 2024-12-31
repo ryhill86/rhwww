@@ -1,6 +1,7 @@
-export default function RHLogoNoWords() {
+export default function RHLogoNoWords({ className }: { className?: string }) {
   return (
     <svg
+      className={className}
       width="149"
       height="106"
       viewBox="0 0 149 106"

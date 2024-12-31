@@ -630,6 +630,18 @@ body {
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .visible {
   visibility: visible;
 }
@@ -784,6 +796,10 @@ body {
   height: 1px;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -821,12 +837,20 @@ body {
   width: max-content;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .min-w-\[12rem\] {
   min-width: 12rem;
 }
 
 .min-w-\[8rem\] {
   min-width: 8rem;
+}
+
+.min-w-full {
+  min-width: 100%;
 }
 
 .max-w-max {
@@ -948,6 +972,16 @@ body {
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity, 1));
+}
+
+.bg-zinc-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(113 113 122 / var(--tw-bg-opacity, 1));
 }
 
 .bg-gradient-to-b {
