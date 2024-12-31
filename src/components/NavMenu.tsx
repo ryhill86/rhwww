@@ -5,15 +5,14 @@ import {
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { NavLink } from "react-router";
 import RHLogoNoWords from "./RHLogoNoWords";
 
 const NavMenu = () => (
-  <NavigationMenu className="flex min-w-full justify-between bg-zinc-500">
+  <NavigationMenu className="flex min-w-full justify-between bg-primary px-8 py-4">
+    {/* Logo */}
     <NavigationMenuItem className="flex flex-1">
-      {/* add <RHLogoNoWords className="h-8 w-auto" /> to menu  that links to home */}
       <NavLink to="/">
         <NavigationMenuLink>
           <RHLogoNoWords className="h-8 w-auto" />
@@ -21,34 +20,25 @@ const NavMenu = () => (
       </NavLink>
     </NavigationMenuItem>
     <NavigationMenuList>
-      {/* // logo */}
-      {/* begin tabs */}
+      {/* Tabs */}
       <NavigationMenuItem>
         <NavLink to="/">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Home
-          </NavigationMenuLink>
+          <ListItem title="Home" />
         </NavLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavLink to="/about">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            About
-          </NavigationMenuLink>
+          <ListItem title="About" />
         </NavLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavLink to="/portfolio">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Portfolio
-          </NavigationMenuLink>
+          <ListItem title="Portfolio" />
         </NavLink>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <NavLink to="/contact">
-          <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-            Contact
-          </NavigationMenuLink>
+          <ListItem title="Contact" />
         </NavLink>
       </NavigationMenuItem>
     </NavigationMenuList>
