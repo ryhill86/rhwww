@@ -71,15 +71,22 @@ button:focus-visible {
   }
 }
 
+/* myrtle green - #426B69 / 177, 24%, 34% */
+/* Space Cadet - #222E50 / 224, 40%, 22% */
+/* Dark Slate Grey - #2A4849 / 182, 27%, 23% */
+/* Olivine - #8BB174 / 97, 28%, 57% */
+/* white - #ffffff / 0, 0%, 100% */
+/* black - #000000 / 0, 0%, 0% */
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 0 0% 100%; /* white */
+    --foreground: 240 10% 3.9%; /* almost black */
     --card: 0 0% 100%;
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 177, 24%, 34%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
